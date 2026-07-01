@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Section Rules - قوانين الاقسام</title>
+
+<style>
+:root {
+    --bg-color: #080c14;
+    --card-bg: #0f1626;
+    --primary-color: #1e6091;
+    --accent-color: #3a86ff;
+    --text-color: #ffffff;
+    --muted-text: #94a3b8;
+}
+
+/* تأثير الأنيميشن عند دخول الصفحة */
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl;
+    overflow-x: hidden;
+    /* تشغيل أنيميشن التنقل تلقائياً عند الدخول */
+    animation: fadeInPage 0.6s ease-out forwards;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(8, 12, 20, 0.9), rgba(8, 12, 20, 0.9)), url('uuuiii.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 20px 8%;
+    background: rgba(15, 22, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+.logo span { color: var(--accent-color); }
+
+.btn-back {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+.btn-back:hover { 
+    background: #164e75; 
+    transform: translateY(-2px); /* حركة صعود خفيفة عند التأشير */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 15px;
+}
+
+.section {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 22px;
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-right: 4px solid var(--accent-color);
+    padding-right: 10px;
+}
+
+.section h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.rules-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rules-list li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e2e8f0;
+    margin-bottom: 12px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.rules-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+
+.rights-box {
+    background: rgba(58, 134, 255, 0.05);
+    border: 1px dashed var(--accent-color);
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-style: italic;
+    color: #cbd5e1;
+}
+
+.priority-box {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.priority-1 { background: rgba(239, 68, 68, 0.1); border-right: 4px solid #ef4444; }
+.priority-2 { background: rgba(245, 158, 11, 0.1); border-right: 4px solid #f59e0b; }
+.priority-3 { background: rgba(16, 185, 129, 0.1); border-right: 4px solid #10b981; }
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-link {
+    background: #0f172a;
+    border: 1px solid var(--accent-color);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s, transform 0.2s;
+}
+.btn-link:hover {
+    background: var(--accent-color);
+    box-shadow: 0 0 15px rgba(58, 134, 255, 0.4);
+    transform: translateY(-3px); /* حركة صعود خفيفة عند التأشير */
+}
+
+.note {
+    text-align: center;
+    color: var(--muted-text);
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted-text);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Section <span> Rules</span></div>
+    <a href="index.html" class="btn-back">الرئيسية</a>
+</header>
+
+<div class="container">
+    <h1 class="main-title">قوانين الاقسام \ Section Rules</h1>
+
+    <div class="section">
+        <h2>1. قوانين الشؤون الداخلية</h2>
+        <p style="color: var(--muted-text); line-height: 1.6;"></p>
+        
+        <h3>قوانين اعضاء ومسؤولين الشؤون الداخلية</h3>
+        <ul class="rules-list">
+            <li>يجب أن يحترم كل عضو في شؤون الداخلية الآخرين ويتعامل معهم بلطف</li>
+            <li>يجب على فرد الشؤون الالتزام بالزي الرسمي الكامل في جميع الأوقات. - يُمنع الظهور بمظهر غير لائق أو خارج عن التعليمات المعتمدة</li>
+            <li>يُمنع تجاوز المنجمنت أو النائب عند رفع ملاحظات أو اتخاذ قرارات. - جميع البلاغات والملاحظات تمر بالتدرج الإداري حسب التسلسل</li>
+            <li>يمنع على فرد الشؤون الانحياز أو التدخل الشخصي في أي قضية أو شكوى.- التعامل مع الجميع يكون بناءً على النظام فقط، وليس على العلاقات</li>
+            <li>يجب توثيق أي مخالفة، بلاغ، أو ملاحظة بشكل رسمي وواضح (تاريخ – وقت – اسم – تفاصيل). - أي بلاغ غير موثق يُرفض ولا يُعتمد</li>
+            <li>لا يحق لفرد الشؤون التدخل في أعمال الرقابة الميدانية أو التحقيقات أو القيادة، إلا إذا طُلب منه رسميًا. - التداخل يُعتبر تجاوزًا وتُطبّق عليه العقوبات</li>
+            <li>يخضع كل فرد شؤون لتقييم شهري من قبل رئاسة الشؤون الداخلية - الأداء السيئ أو تكرار الملاحظات قد يؤدي للاستبعاد أو تخفيض الصلاحية</li>
+            <li>أي مهمة تُكلف من المنجمنت أو النائب تعتبر واجبة التنفيذ. - الامتناع عن تنفيذ المهام أو التأخر المتعمد يُعتبر تقصير في أداء الواجب</li>
+            <li>يمنع استخدام اسم الشؤون أو الصلاحية للتأثير على الآخرين أو حل مشكلات شخصية. - يُحاسب بشدة من يُسيء استخدام موقعه أو صفته الرسمية</li>
+            <li>لا يحق للفرد التدخل في بلاغات، مشاكل، أو قضايا خارج مهامه المباشرة دون تكليف رسمي - أي تدخل عشوائي يُعتبر تجاوز للصلاحيات</li>
+            <li>يُمنع استخدام أسلوب الأمر أو التعالي على بقية الأفراد. - الالتزام باللباقة والاحترام في الحديث والتعامل واجب أساسي</li>
+            <li>يُمنع استخدام أسلوب الأمر أو التعالي على بقية الأفراد. - الالتزام باللباقة والاحترام في الحديث والتعامل واجب أساسي</li>
+            <li>يجب الامتناع عن أي سلوكيات قد تسبب الإساءة أو التشويش</li>
+            <li>يجب على جميع الأعضاء الحضور في الوقت المحدد للاجتماعات الأسبوعية</li>
+            <li>التأخير غير مقبول ابد ، وفي حالة حدوث تأخير يجب إبلاغ المسؤولين قبلها</li>
+            <li>يجب الإبلاغ عن أي مشاكل أو استفسارات بشكل صريح ومباشر للمسؤولين</li>
+            <li>يجب على كل عضو تنفيذ المهام الموكلة إليه وبجودة عالية</li>
+            <li>يمنع التدخل في تكت تم استلامة شخص قبلك ( وفي حال الشخص الذي اسلتم التكت وسحب عليه سيتم محاسبة بشكل مباشر ومن ثم يحق لك التدخل في تكت) </li>
+            <li>اجتهادك في قسم الشؤون الداخلية يساعد في ترقيتك الجاية</li>
+            <li style="color: #992424; font-weight: bold;"> لا يحق تعديل او إضافة نظام او قانون معين يخص الشرطة او يخص الشؤون الداخلية دون الرجوع الى المكتب الرئاسي(Senior Commanders)</li>
+            <li style="color: #992424; font-weight: bold;"> الشؤون الداخلية مالها دخل ابد في مسؤوليات الأكاديمية او الونقات وغيرها من المسؤوليات </li>
+            <li style="color: #992424; font-weight: bold;">لايتم اعطاء عسكري الاسبوع الى بعد مراجعة (Senior Commanders)</li>
+            <li style="color: #992424; font-weight: bold;"> يُمنع تمامًا تسريب أي معلومة تتعلق بشكاوى، مخالفات، أو قضايا داخلية. - يُعتبر كشف أي معلومات داخلية مخالفة تستوجب محاسبة مباشرة. </li>
+            <li style="color: #992424; font-weight: bold;">يجب على الشؤون الداخلية (إدارة الشرطة) الالتزام بكافة القوانين الداخلية والتنظيمية المعمولة من (Senior Commanders)</li>
+            <li style="color: #992424; font-weight: bold;">أي خرق للوائح وقوانين وانظمه الشرطة , يؤدي إلى اتخاذ المحاسبه شديدة جدا</li>
+            <li style="color: #992424; font-weight: bold;">الجرد اسبوعي (الجمعة , السبت ساعة 8  - 10 الليل ) !</li>
+            <li>النقاط المسموحة صرفها من ادارة الشرطة للحالات التالية :</li>
+            <li><strong>استلام الدس باتش :</strong></li>
+            <li style="color: #992424; font-weight: bold;">يُمنح الفرد من (2) إلى (4) نقاط وفقًا لمستوى أدائه وتميزه أثناء العمل في الدس باتش وبعد ارفاق دليل واضح لأستلام الدس باتش يتم اصدار صرف النقاط له (المسؤول عن رصد النقاط اعضاء الشؤون الداخلية)</li>
+            <li><strong>تسجيل قضية في سجل القضايا  :</strong> </li>
+            <li style="color: #992424; font-weight: bold;">يتم تسجيل نقطة لكل قضية ( بسيطة ) في Mdt (المسؤول عن رصد النقاط اعضاء الشؤون الداخلية)</li>
+            <li><strong>تسجيل قضية (مطلوب) في سجل القضايا  :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 3 نقاط لكل قضية (مطلوب جنائيا) (المسؤول عن رصد النقاط اعضاء الشؤون الداخلية)</li>
+            <li><strong>حضور تدريبات الأكاديمية  :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 5-10 نقاط لكل تدريب يشترك به العسكري ( تدريب مستجدين-) , (المسؤول عن رصد النقاط مسؤولين الاكاديمية)</li>
+            <li><strong>تسجيل قضية (المطلوب الاول) :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 15 نقطة في حال القبض على المطلوب( الاول ) , (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>تسجيل قضية (المطلوب الثاني) :</strong></li>
+            <li style="color: #992424; font-weight: bold;">  يتم تسجيل 10 نقطة في حال القبض على المطلوب ( الثاني ) , (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>تسجيل قضية (المطلوب الثالث) :</strong></li>
+            <li style="color: #992424; font-weight: bold;">  يتم تسجيل 5 نقاط في حال القبض على المطلوب ( الثالث ) , (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>تجمع عصابات :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 10-15 نقطة في حال القبض على تجمع عصابات (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>سرقة فليكا :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 3-5 نقطة في حال القبض على جميع المجرمين (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>سرقة كاش إكستشينج :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل3-5 نقاط في حال القبض على جميع المجرمين (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>سرقة مغسلة الجنوب :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 1-3 نقاط في حال القبض على جميع المجرمين (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>سرقة الديجتل :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 1-3 نقاط في حال القبض على جميع المجرمين (المسؤول عن رصد النقاط مسؤولين الشؤون الداخلية)</li>
+            <li><strong>عمل نقطة تفتيش :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 5 نقاط في حال عمل تفتيش والقبض على ( مطلوب ) جنائيا (المسؤول عن رصد النقاط اعضاء الشؤون الداخلية)</li>
+            <li><strong>الامتياز في الميدان :</strong></li>
+            <li style="color: #992424; font-weight: bold;"> يتم تسجيل 5 نقاط في حال العسكري ممتاز ميدانين (المسؤول عن رصد النقاط كابتن واعلى ومسؤولين الشؤون الداخلية)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2.1 قوانين الاكاديمية</h2>
+        <ul class="rules-list">
+            <li>يجب أن يحترم كل من في الاكاديمية الآخرين ويتعامل معهم بلطف</li>
+            <li>يجب على الأعضاء الالتزام بالقوانين العامة الخاصة لشرطة (قواعد شرطة)</li>
+            <li>يجب على جميع الأعضاء الالتزام بالمواعيد المحددة لاجتماعات الأكاديمية أو التدريبات</li>
+            <li>التأخير أو التغيب المتكرر قد يؤدي إلى تحذيرات و استبعاد من الأكاديمية</li>
+            <li>على كل عضو أداء المهام بجود عالية من دون إهمال</li>
+            <li>يجب على الأعضاء التصرف بشكل احترافي أثناء اللعب أو التدريبات، ويشمل ذلك التواصل الواضح والصريح مع أعضاء الأكاديمية</li>
+            <li>يجب تجنب تصرفات تضر اللعب أو تزعج الاعب بأي شكل من الاشكال</li>
+            <li>يجب أن لا تعمل في الأكاديمية بمفردك (يجب التعاون مع زملائك)</li>
+            <li>يجب على الأعضاء المشاركة في الأنشطة والاجتماعات التي تنظمها قيادة الأكاديمية</li>
+            <li>الغياب الغير مبرر عن التدريب او الاجتماع قد يؤدي إلى عقوبات شديده</li>
+            <li>يجب على الأعضاء الإبلاغ عن أي سلوك مسيء مسؤولين الأكاديمية الى (Senior Commanders)</li>
+            <li>يجب على جميع الأعضاء احترام التعليمات و القوانين التي يحددها المشرفون في الأكاديمية</li>
+            <li>يجب إبلاغ المشرفين بأي مشاكل أو استفسارات بشكل محترم</li>
+            <li style="color: #992424; font-weight: bold;">يمنع استخدام الألفاظ النابية أو السلوك العدائي تجاه الآخرين (مثال : لوح بسطار والخ..)</li>
+            <li style="color: #992424; font-weight: bold;">يُمنع تمامًا تسريب أي معلومة تتعلق بالاكاديمية - يُعتبر كشف أي معلومات داخلية مخالفة تستوجب محاسبة مباشرة.</li>
+            <li style="color: #992424; font-weight: bold;"> لا يحق تعديل او إضافة نظام او قانون معين يخص الشرطة او يخص الاكاديمية دون الرجوع الى (Senior Commanders)</li>
+
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3.1 قوانين الونقات</h2>
+        <ul class="rules-list">
+            <li><strong>: Wings Commander</strong></li>
+            <li style="color: #992424; font-weight: bold;"> ضمان الالتزام بالاحترام المتبادل وحسن التعامل داخل جميع الونقات </li>
+            <li style="color: #992424; font-weight: bold;"> يجب الالتزام بجميع أنظمة وسياسات إدارة الشرطة </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع إساءة استخدام صلاحيات المنصب لأي غرض شخصي </li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم بالحيادية والعدل في جميع القرارات </li>
+            <li style="color: #992424; font-weight: bold;"> أي تعميم يجب اخبار فيه (Senior Commanders) وتأتي الموافقة منهم </li>
+            <li style="color: #992424; font-weight: bold;"> لا يحق تعديل او إضافة نظام او قانون معين يخص الشرطة او يخص الونقات دون الرجوع الى (Senior Commanders) </li>
+            <li style="color: #992424; font-weight: bold;"> الرتب المسموحة للونق تكون ثابته وتمم تحديدها من قبل مسؤول الونقات بعد مراجعة (Senior Commanders) </li>
+            <li style="color: #992424; font-weight: bold;"> يجب الحفاظ على سرية المعلومات والعمليات الخاصة بالونقات </li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم بمتابعة جميع الونقات وضمان انضباطها </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع إصدار قرارات تخالف تعليمات (Senior Commanders) </li>
+            <li style="color: #992424; font-weight: bold;"> لا يحق لك تسليم احد ونق بدون تدريب ابد </li>
+            <li><strong>: Wings Supervisor </strong></li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم بالإشراف المباشر على قادة الونقات </li>
+            <li style="color: #992424; font-weight: bold;"> يجب متابعة التزام الأعضاء بالأنظمة والتعليمات </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع تجاهل أو إخفاء المخالفات الإدارية </li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم برفع التقارير إلى Wings Commander</li>
+            <li style="color: #992424; font-weight: bold;"> يجب التعامل مع جميع الأعضاء باحترام ومهنية </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع استغلال المنصب أو إساءة استخدام الصلاحيات </li>
+
+            <li><strong>: Wings Leader </strong></li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم بقيادة الونق وفق أنظمة الشرطة </li>
+            <li style="color: #992424; font-weight: bold;"> يجب تنفيذ تعليمات Wings Supervisor وWings Commander </li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم بإدارة الونق المكلف به فقط </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع التدخل في إدارة أو قرارات الونقات الأخرى دون تكليف رسمي </li>
+            <li style="color: #992424; font-weight: bold;"> يجب متابعة انضباط أعضاء الونق والتأكد من التزامهم بالأنظمة </li>
+            <li style="color: #992424; font-weight: bold;"> يلتزم برفع تقارير الونق إلى Wings Supervisor عند الطلب </li>
+            <li style="color: #992424; font-weight: bold;"> يجب الحفاظ على جاهزية أعضاء الونق ومعداته </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع إساءة استخدام صلاحيات قيادة الونق </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4.1 قوانين فرقة Swat</h2>        
+        <ul class="rules-list" style="margin-top: 15px;">
+            <li>ضمان الالتزام بالاحترام والمتبادل وحسن التعامل مع الجميع سواء مواطن او عسكري </li>
+            <li>يجب تنفيذ أوامر مسؤولين سوات أثناء العمليات</li>
+            <li>يمنع مخالفة خطة الاقتحام أو التحرك بشكل فردي دون إذن</li>
+            <li>يجب الالتزام بالاحترافية والانضباط في جميع العمليات</li>
+            <li>يمنع إثارة الفوضى أو التصرفات غير المهنية أثناء المهمة</li>
+            <li>يجب استخدام القوة بما يتناسب مع مستوى التهديد</li>
+            <li>يمنع استخدام القوة المفرطة أو غير المبررة</li>
+            <li>يمنع تسريب خطط العمليات أو معلومات الفرقة</li>
+            <li>يجب الحفاظ على سرية تكتيكات SWAT</li>
+            <li>يمنع استخدام مركبات SWAT للأغراض الشخصية</li>
+            <li>يجب استخدام المركبات وفق تعليمات (Swat Commander , Swat Supervisor)</li>
+            <li>يجب المحافظة على مستوى التدريب والجاهزية</li>
+            <li>يلتزم جميع الأعضاء بحضور التدريبات الإلزامية</li>
+            <li>يمنع تنفيذ الاقتحامات أو العمليات الفردية دون تنسيق مع (Swat Commander , Swat Supervisor)</li>
+            <li>يجب الالتزام بالعمل الجماعي والتغطية المتبادلة</li>
+            <li>يتحمل كل عضو مسؤولية أفعاله أثناء العمليات</li>
+            <li>يجب رفع تقرير بعد انتهاء أي عملية خاصة إذا طُلب من (Senior Commanders)</li>
+            <li>يجب إعطاء الأولوية لسلامة الرهائن والمدنيين أثناء تنفيذ العمليات</li>
+            <li>يجب التعاون مع جميع أقسام الشرطة أثناء العمليات المشتركة</li>
+            <li style="color: #992424; font-weight: bold;"> يمنع استدعاء SWAT إلا في الحالات عالية الخطورة و بأمر من (Senior Commanders , Swat Commander) </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع استخدام معدات أو أسلحة SWAT خارج المهام المصرح بها الا بأمر من  (Senior Command ) </li>
+            <li style="color: #992424; font-weight: bold;"> يجب الالتزام بالزي الرسمي المعتمد للوحدة أثناء جميع العمليات </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع الانضمام لأي عملية خاصة دون استدعاء أو تكليف رسمي </li>
+            <li style="color: #992424; font-weight: bold;"> يجب الالتزام بتسلسل القيادي وعدم تجاوز قائد الفرقة </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع مغادرة موقع العملية قبل صدور أمر من (Swat Commander , Swat Supervisor) </li>
+            <li style="color: #992424; font-weight: bold;"> يجب التأكد من جاهزية الأسلحة والمعدات قبل بدء أي مهمة </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع طلق النار إلا عند وجود مبرر نظامي أو امر من قائد الفرقة </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع رفض الأوامر الصادرة من قادة الفرقة او من رئاسة  </li>
+            <li style="color: #992424; font-weight: bold;"> يمنع استدعاء وحدة SWAT في البلاغات العادية دون وجود مبرر يوافق عليه (Senior Commanders , Swat Commander) </li>
+            <li style="color: #992424; font-weight: bold;"> يحق لقائد العملية استبعاد أي عضو غير جاهز أو غير ملتزم بتعليمات المهمة </li>
+                        <li style="color: #992424; font-weight: bold;">الموجة الرسمية لفرقة SWAT هي 7</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4.2 قوانين قسم CID</h2>
+        <ul class="rules-list">
+            <li>ضمان الالتزام بالاحترام والمتبادل وحسن التعامل مع الجميع سواء مواطن او عسكري </li>
+            <li>يجب الالتزام بالحيادية والنزاهة أثناء جمع الأدلة وإجراء التحقيقات</li>
+            <li>يلتزم أعضاء القسم بالأنظمة والسياسات الصادرة من (Senior Commanders)</li>
+            <li>يمنع القبض على أي مشتبه به دون وجود سبب نظامي أو أدلة كافية</li>
+            <li>يلتزم أعضاء CID بالتعاون مع جميع أقسام الشرطة عند الحاجة</li>
+            <li>يجب الحصول على موافقة  قبل تنفيذ العمليات الحساسة أو عالية الخطورة  من (Senior Commanders)</li>
+            <li>يلتزم العضو بحضور الاجتماعات والتدريبات التي يحددها القسم</li>
+            <li>يمنع تجاوز التسلسل الإداري أو إصدار قرارات خارج نطاق الصلاحيات</li>
+            <li>يجب رفع تقارير دورية عن سير التحقيقات إلى المسؤول المباشر (CID Director)</li>
+            <li>يمنع مشاركة أي معلومات تخص القسم مع جهات غير مخولة</li>
+            <li>يلتزم أعضاء القسم بالمحافظة على سمعة CID والظهور بمظهر احترافي</li>
+            <li>يجب تنفيذ أوامر قيادة (Senior Commanders , CID Director)</li>
+            <li>مخالفة لأنظمة القسم أو إساءة استخدام الصلاحيات تعرض العضو للمساءلة الإدارية</li>
+            <li style="color: #992424; font-weight: bold;">يلتزم جميع أعضاء CID بالمحافظة على سرية التحقيقات وعدم إفشاء أي معلومات إلا (Senior Commanders , CID Director)</li>
+            <li style="color: #992424; font-weight: bold;">يمنع فتح أي تحقيق جنائي دون وجود بلاغ أو أدلة أو تكليف رسمي من (CID Director , CID Supervisor)</li>
+            <li style="color: #992424; font-weight: bold;">يجب توثيق جميع التحقيقات والإجراءات في التقارير الرسمية</li>
+            <li style="color: #992424; font-weight: bold;">يمنع تسريب معلومات القضايا أو هوية المشتبه بهم أو الشهود</li>
+            <li style="color: #992424; font-weight: bold;">يمنع العبث بالأدلة أو إخفاؤها أو تعديلها بأي شكل</li>
+            <li style="color: #992424; font-weight: bold;">يمنع استخدام معدات أو مركبات القسم لأغراض شخصية</li>
+            <li style="color: #992424; font-weight: bold;">يجب الالتزام بجميع القواعد والأنظمة الداخلية</li>
+            <li style="color: #992424; font-weight: bold;">يمنع التصرف بطريقة تضر بسمعة القسم أو الشرطة</li>
+            <li style="color: #992424; font-weight: bold;">يجب الالتزام بالوقت المحدد للحضور </li>
+            <li style="color: #992424; font-weight: bold;">يمنع إهمال المهام أو التأخير في تنفيذها</li>
+            <li style="color: #992424; font-weight: bold;">يجب الالتزام بجميع إجراءات التي تحافظ على سلامة المواطنين</li>
+            <li style="color: #992424; font-weight: bold;">في حال وجود اكثر من 6 عساكر غير CID يحق لوحدات الCID مباشرةاعمالهم</li>
+            <li style="color: #992424; font-weight: bold;">الموجة الرسمية للCID هي 6</li>
+        </ul>
+    </div>
+    <div class="note">تنويه: جميع القوانين المدرجة أعلاه قابلة للتعديل والتحسين المستمر وايضا مخالفتك لأحد القوانين تعرضك للمحاسبة الشديدة .</div>
+</div>
+
+<footer>
+    <p>All Rights Reserved X.X95 © 2026</p>
+    <p>Designed by X.X95</p>
+</footer>
+
+</body>
+</html>

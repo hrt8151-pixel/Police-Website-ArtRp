@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rank Tasks - مهام رتب الشرطة</title>
+<style>
+    :root {
+        --bg-color: #080c14;
+        --accent-color: #3a86ff;
+        --text-color: #ffffff;
+        --muted-text: #94a3b8;
+        --card-bg: rgba(15, 22, 38, 0.8);
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        line-height: 1.6;
+        background-image: linear-gradient(rgba(8, 12, 20, 0.9), rgba(8, 12, 20, 0.9)), url('uuuiii.png');
+        background-size: cover;
+        background-attachment: fixed;
+        animation: fadeInPage 0.6s ease-out forwards;
+    }
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.nav-home-btn {
+    background-color: #1e6091; /* لون الزر الغامق */
+    color: white;
+    padding: 8px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 20px 8%;
+    background: rgba(15, 22, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+    
+    .logo { font-size: 24px; font-weight: bold; }
+    .logo span { color: var(--accent-color); }
+
+    .top-back-btn {
+        background: #1e6091; 
+        color: white; 
+        padding: 10px 25px; 
+        text-decoration: none; 
+        border-radius: 8px; 
+        font-size: 18px; 
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .top-back-btn:hover { background: #3a86ff; transform: translateY(-3px); box-shadow: 0 4px 12px rgba(58, 134, 255, 0.3); }
+
+    .container { padding: 0 20px; max-width: 1000px; margin: 40px auto; }
+    h1 { font-size: 36px; text-align: center; margin-bottom: 30px; }
+    
+    .rank-section { background: var(--card-bg); padding: 25px; border-radius: 15px; margin-bottom: 25px; border-right: 5px solid var(--accent-color); }
+    .rank-section h2 { color: var(--accent-color); font-size: 28px; margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+    
+    .rank-item { margin-bottom: 25px; font-size: 18px; line-height: 1.8; }
+    .rank-item strong { color: var(--accent-color); display: block; margin-bottom: 8px; font-size: 20px; }
+    .soon-text { color: var(--muted-text); font-style: italic; }
+
+    /* تذييل الصفحة */
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--muted-text);
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+    }
+
+    .note {
+    text-align: center;
+    color: var(--muted-text);
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Rank <span>Tasks</span></div>
+    <a href="index.html" class="nav-home-btn">الرئيسية</a>
+</header>
+
+<div class="container">
+    <h1>مهام الرتب \ Rank Tasks</h1>
+
+    <div class="rank-section">
+        <h2>Senior Command Tasks</h2>
+        <div class="rank-item"><strong>: Police Chief </strong> أعلى رتبة قيادية في الشرطة، مسؤول عن الإشراف على جميع الأقسام واتخاذ القرارات الإدارية والتنظيمية لضمان سير العمل بكفاءة واحترافية.</div>
+        <div class="rank-item"><strong>: General</strong>من القيادات العليا في الشرطة، مسؤول عن الإشراف على الإدارات والأقسام ومتابعة تنفيذ الخطط والقرارات الصادرة من القيادة العليا.</div>
+        <div class="rank-item"><strong>: LSPD Chief</strong> المسؤول المباشر عن إدارة شرطة لوس سانتوس， يشرف على الأقسام والوحدات المختلفة ويعمل على تنظيم العمليات وتحقيق أعلى مستويات الأداء والانضباط داخل القسم.</div>
+
+    </div>
+
+    <div class="rank-section">
+        <h2>Command Officer Tasks</h2>
+        <div class="rank-item"><strong>: Colonel</strong> من القيادات العليا في الشرطة، مسؤول عن الإشراف على الأقسام ومتابعة سير العمل ورفع التقارير والتوصيات للقيادة العليا , متابعة أداء (Lieutenant وما فوق) ,  تفعيل حالة الطوارئ القصوى عند الحاجة. </div>
+        <div class="rank-item"><strong>: Major</strong> من الضباط القياديين، مسؤول عن الإشراف على الوحدات الميدانية ومتابعة سير العمليات وتنفيذ توجيهات القيادة الأعلى , متابعة أداء Lieutenants و First Lieutenants , متابعة حضور وانضباط الضباط التابعين له , تنظيم الاجتماعات الداخلية للقسم لمناقشة الأداء والمستجدات , تفعيل حالة الطوارئ القصوى عند الحاجة.</div>
+    </div>
+
+    <div class="rank-section">
+        <h2>Field Supervisor Tasks</h2>
+        <div class="rank-item"><strong>: Captain</strong> إدارة العمليات اليومية داخل القسم، توزيع المهام على الضباط، الإشراف على تدريب أو اختبار الضباط الجدد، والحفاظ على الانضباط والالتزام بالقوانين , متابعة تجهيزات الفرق والمعدات اللازمة , الإشراف على تدريب او اختبارالضباط الجدد . </div>
+        <div class="rank-item"><strong>: First Lieutenant</strong> الإشراف على تنفيذ العمليات الميدانية اليومية، متابعة أداء ضباط الصف والأفراد أثناء المهام، والإشراف على بعض التدريبات والتأكد من الالتزام بالتعليمات والأنظمة , متابعة أداء الافراد ورفع تقارير لشؤون الداخلية , تسجيل تقارير التواجد والانضباط للافراد , متابعة الانضباط العام للقطاع التابع له , </div>
+        <div class="rank-item"><strong>: Lieutenant</strong> تمثل هذه الرتبة بداية المسؤولية الفعلية كضابط ميداني، متابعة أداء الأفراد ورفع تقارير للشؤون الداخلية والإشراف المباشر على الأفراد و  متابعة أداء الافراد ورفع تقارير لشؤون الداخلية و الإشراف المباشر على الافراد ورفع تقارير الشؤون الداخلية و إدارة نقاط التفتيش و متابعة التزام الأفراد بالزي والمعدات.</div>
+    </div>
+
+            <div class="rank-section">
+        <h2>Field Sergeant Tasks</h2>
+        <div class="rank-item"><strong>: Staff Sergeant</strong>  <span class="soon-text"></span>الإشراف الكامل على جميع ضباط الصف ورفع التقارير الى رئاسة الشؤون الداخلية , تقييم أداء ضباط الصف وإعطاء التوجيهات ورفع التقارير الى شؤون الداخلية.</div>
+
+        <div class="rank-item"><strong>: First Sergeant</strong> <span class="soon-text"></span>الإشراف الكامل على الافسر ثري - سنيور اوفسر ورفع التقارير الى رئاسة الشؤون الداخلية , تقييم أداء الافسر ثري - سنيور اوفسر وإعطاء التوجيهات ورفع التقارير الى شؤون الداخلية.</div>
+
+        <div class="rank-item"><strong>: Sergeant</strong> <span class="soon-text"></span>الإشراف الكامل على الافسر ون والافسر تو ورفع التقارير الى رئاسة الشؤون الداخلية , تقييم أداء الافسر ون والافسر تو وإعطاء التوجيهات ورفع التقارير الى شؤون الداخلية.</div>
+    </div>
+
+    <div class="rank-section">
+        <h2>Junior Rank Tasks</h2>
+        <div class="rank-item"><strong>: Senior Officer</strong> <span class="soon-text">...Nothing Soon</span></div>
+        <div class="rank-item"><strong>: Officer III</strong> <span class="soon-text">...Nothing Soon</span></div>
+        <div class="rank-item"><strong>: Officer II</strong> <span class="soon-text">...Nothing Soon</span></div>
+        <div class="rank-item"><strong>: Officer I</strong> <span class="soon-text">...Nothing Soon</span></div>
+    </div>
+
+    <div class="rank-section">
+        <h2>Training Rank  Tasks</h2>
+        <div class="rank-item"><strong>: Solo Cadet</strong> <span class="soon-text">...Nothing Soon</span></div>
+        <div class="rank-item"><strong>: Cadet</strong> <span class="soon-text">...Nothing Soon</span></div>
+    </div>
+        <div class="note">تنويه: جميع المهام المدرجة أعلاه قابلة للتعديل والتحسين المستمر وايضا مخالفتك لأحد للمهام وتدخل في مهام الغير يعرضك للمحاسبة الشديدة .</div>
+</div>
+
+<footer>
+    <p>All Rights Reserved X.X95 © 2026</p>
+    <p>Designed by X.X95</p>
+</footer>
+
+</body>
+</html>

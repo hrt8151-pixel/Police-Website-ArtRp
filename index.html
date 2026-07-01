@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Police Website</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-color: #080c14;
+    --accent-color: #3a86ff;
+    --text-color: #ffffff;
+    --muted-text: #94a3b8;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    color: var(--text-color);
+    direction: rtl;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(rgba(8, 12, 20, 0.85), rgba(8, 12, 20, 0.85)), url('uuuiii.png');
+    background-position: center;
+    background-attachment: fixed;
+    animation: fadeInPage 0.6s ease-out forwards;
+}
+
+.police-announcement {
+    position: absolute;
+    top: 125px;
+    right: 20px;
+    width: 400px;
+    background: rgba(15, 22, 38, 0.8);
+    border-right: 4px solid var(--accent-color);
+    padding: 3px 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 90;
+}
+.police-announcement h2 { margin: 0 0 10px 0; color: var(--accent-color); font-size: 18px; }
+.police-announcement ul { padding-right: 20px; color: #cbd5e1; font-size: 13px; }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    margin: 15px 5%;
+    background: rgba(15, 22, 38, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+}
+
+.logo-container { display: flex; align-items: center; gap: 12px; }
+.text-stack { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+.logo-main { font-size: 16px; font-weight: bold; }
+.logo-sub { font-size: 12px; color: var(--accent-color); font-weight: bold; }
+.logo-img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-color); }
+
+nav a { color: var(--muted-text); text-decoration: none; margin: 0 10px; transition: all 0.3s; font-weight: 700; font-size: 14px; }
+nav a:hover, nav a.active { color: #fff; text-shadow: 0 0 10px var(--accent-color); }
+
+.btn-discord { background: var(--accent-color); color: white; padding: 8px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.btn-discord:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--accent-color); }
+
+.hero { text-align: center; padding: 120px 20px; max-width: 800px; margin: 0 auto; }
+.hero h1 { font-size: 45px; margin-bottom: 25px; }
+.hero h1 span { color: var(--accent-color); }
+.hero p { color: #e2e8f0; font-size: 18px; background: var(--glass-bg); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border-right: 5px solid var(--accent-color); line-height: 1.8; }
+
+footer { text-align: center; padding: 40px; color: var(--muted-text); border-top: 1px solid rgba(255, 255, 255, 0.05); }
+
+@media (max-width: 1024px) { .police-announcement { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="police-announcement">
+<li style="color: #3a86ff; font-weight: bold;"> Latest Police Announcements<ul>
+        <li>تعلن شرطة لوس سانتوس عن اغلاق باب النقل العسكري صادر القرار من القيادة العليا</li>
+        <li>اوقات التقديم العسكري : يوم الثلاثاء ويوم الخميس الساعة 9 مساءً.</li>
+    </ul>
+</div>
+
+<header>
+    <a href="https://discord.gg/DkCzcUsZcT" target="_blank" class="btn-discord">انضم الى ديسكورد الشرطة</a>
+
+    <nav>
+        <a href="#" class="active">الرئيسية</a>
+        <a href="rules.html">قوانين الشرطة</a>
+        <a href="department-rules.html">قوانين الأقسام</a>
+         <a href="Managemt.html">نظرة عامة على الاقسام</a>
+        <a href="faq.html">أسئلة الشرطة</a>
+        <a href="staff.html">إدارة الشرطة</a>
+        <a href="Ranktasks.html">مهام الرتب</a>
+        <a href="Permissions.html">صلاحيات الرتب</a>
+        <a href="Department Responsibilities & Authoritie.html">صلاحيات الاقسام</a>
+    </nav>
+
+    <div class="logo-container">
+        <div class="text-stack">
+            <div class="logo-main">Art Rp</div>
+            <div class="logo-sub">Police Website</div>
+        </div>
+        <img src="art6.gif" alt="Logo" class="logo-img">
+    </div>
+</header>
+
+<div class="hero">
+    <h1>مرحباً بك في موقع <span>الشرطة</span></h1>
+    <p>لقد أنشأنا هذا الموقع ليكون مرجعكم الأساسي لجميع المعلومات المتعلقة بالشرطة. هدفنا هو تسهيل وصولك إلى جميع المعلومات التي تحتاجها عن جهاز الشرطة.</p>
+</div>
+
+<footer>
+    Copyright © 2026 Art Rp CFW All Rights Reserved <br>
+    <span style="font-size: 12px; color: #475569; margin-top: 5px; display: block;">
+        Designed by X.X95
+    </span>
+</footer>
+
+</body>
+</html>

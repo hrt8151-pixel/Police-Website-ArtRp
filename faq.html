@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>أسئلة عن الشرطة - Police Questions</title>
+
+<style>
+    :root {
+        --bg-color: #080c14;
+        /* ... باقي المتغيرات ... */
+    }
+
+    /* أضف الأنميشن هنا */
+    @keyframes fadeInPage {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+        /* أضف الأنميشن للـ body */
+        animation: fadeInPage 0.6s ease-out forwards;
+        margin: 0;
+        /* ... باقي تنسيق الـ body ... */
+    }
+    
+    /* ... باقي الكود الخاص بك ... */
+:root {
+    --bg-color: #080c14;
+    --card-bg: #0f1626;
+    --primary-color: #1e6091;
+    --accent-color: #3a86ff;
+    --text-color: #ffffff;
+    --muted-text: #94a3b8;
+}
+
+/* تأثير الأنيميشن عند الدخول */
+@keyframes fadeInPage {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    direction: rtl;
+    overflow-x: hidden;
+    animation: fadeInPage 0.6s ease-out forwards;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(8, 12, 20, 0.9), rgba(8, 12, 20, 0.9)), url('uuuiii.png');
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 20px 8%;
+    background: rgba(15, 22, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+.logo span { color: var(--accent-color); }
+
+.btn-back {
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+.btn-back:hover { background: #164e75; }
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(58, 134, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.question::before {
+    content: "Q";
+    color: var(--accent-color);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.answer {
+    font-size: 15px;
+    color: #e2e8f0;
+    line-height: 1.7;
+    padding-right: 20px;
+    border-right: 2px solid rgba(58, 134, 255, 0.3);
+}
+
+.answer ul {
+    margin: 8px 0 0 0;
+    padding-right: 20px;
+}
+
+.answer li {
+    margin-bottom: 6px;
+}
+
+.footer-note {
+    text-align: center;
+    background: rgba(15, 22, 38, 0.6);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.footer-note p {
+    color: var(--muted-text);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.btn-discord {
+    background: #5865F2;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+.btn-discord:hover {
+    background: #4752c4;
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted-text);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+    font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Police<span> Questions</span></div>
+    <a href="index.html" class="btn-back">الرئيسية</a>
+</header>
+
+<div class="container">
+    <h1 class="main-title">اسئلة عن الشرطة \ Police Questions</h1>
+    <div class="subtitle">الأسئلة العامة :</div>
+
+    <div class="faq-item">
+        <div class="question">1 - متى أوقات فتح التقديم على الشرطة؟</div>
+        <div class="answer" style="color: #ffb703; font-weight: bold;">يوم الثلاثاء ويوم الخميس الساعة 9 مساءً.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">2 - شروط التقديم العسكري؟</div>
+        <div class="answer">
+            <ul>
+                <li>يجب أن تكون لديك خلفية عن نظام الشرطة.</li>
+                <li>يجب أن يكون عمرك 16 سنة وأكثر.</li>
+                <li>يجب مراجعة قوانين وبروتوكولات الشرطة الخاصة بالسيرفر.</li>
+                <li>يجب إتقان الرول بلاي وتقمص الشخصية لأبعد درجة ممكنة.</li>
+                <li style="color: #ffb703; font-weight: bold;">يجب على المتقدم أن يكون لديه مايك واضح وغير مزعج!!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">3 - النقل العسكري متواجد؟</div>
+        <div class="answer" style="color: #ffb703; font-weight: bold;">Soon</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">4 - ماهي شروط النقل؟</div>
+        <div class="answer">
+            <ul>
+                <li>عمر المتقدم للنقل العسكري لا يقل عن 16 سنة.</li>
+                <li>الالتزام بقوانين وقواعد الشرطة التابعة للسيرفر.</li>
+                <li>يجب أن يكون الاسم واقعياً ومكتوباً بالإنجليزية.</li>
+                <li>سي في (CV) إن وُجد.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">5 - كيف أقدم على نقل؟</div>
+        <div class="answer" style="color: #ffb703; font-weight: bold;">Soon</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">6 - هل الشرطة تجامل أو تمشي وهل تمشي على نظام واضح؟</div>
+        <div class="answer" style="color: #ffb703; font-weight: bold;">غير صحيح، الشرطة تمشي بنظام واضح وصريح ومن يخالف النظام يُعاقب بشكل فوري.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="question">7 - هل بإمكاني يوماً من الأيام أن أصبح رتبة عالي؟</div>
+        <div class="answer" style="color: #ffb703; font-weight: bold;">نعم، أثبت نفسك ومجهودك في الميدان لتوضح أنك تستحق الرتبة العالية.</div>
+    </div>
+
+
+    <div class="footer-note">
+        <p>لم تجد ما تبحث عنه؟ بإمكانك فتح تذكرة استفسار مباشرة في ديسكورد الشرطة</p>
+        <a href="https://discord.gg/rZfC3fNjF" target="_blank" class="btn-discord">فتح تذكرة استفسار</a>
+    </div>
+</div>
+
+<footer>
+    <p>All Rights Reserved X.X95 © 2026</p>
+    <p>Designed by X.X95</p>
+</footer>
+
+</body>
+</html>

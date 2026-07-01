@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Department Overview - نظرة عامة على الاقسام</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+    --bg-color: #05070a;
+    --card-bg: rgba(15, 22, 38, 0.7);
+    --accent-color: #3a86ff;
+    --text-color: #ffffff;
+    --muted-text: #94a3b8;
+    --glass-border: rgba(58, 134, 255, 0.3);
+}
+
+/* انميشن الدخول */
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(8, 12, 20, 0.9), rgba(8, 12, 20, 0.9)), url('uuuiii.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 20px 8%;
+    background: rgba(15, 22, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* الهيدر الموحد */
+.nav-header {
+    background-color: #080c14;
+    padding: 25px 80px; /* قمت بتكبير المساحة هنا لتكبير الشريط */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-home-btn {
+    background-color: #1e6091;
+    color: white;
+    padding: 10px 25px; /* تكبير الزر قليلاً */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-right: 150px; /* دفع الزر للداخل قليلاً ليكون متوازناً */
+}
+
+.nav-home-btn:hover { background-color: #164e75; }
+
+.nav-title { font-size: 22px; font-weight: bold; color: white; margin-left: 20px; }
+.nav-title span { color: var(--accent-color); }
+
+/* العنوان الرئيسي */
+.header-section { text-align: center; padding: 60px 20px; }
+.header-section h1 { font-size: 38px; margin-bottom: 10px; }
+.header-section span { color: var(--accent-color); }
+
+/* البطاقات */
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 25px; 
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--glass-border);
+    padding: 40px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(58, 134, 255, 0.15);
+}
+
+.card i { font-size: 2.5em; color: var(--accent-color); margin-bottom: 25px; display: block; }
+.card h2 { font-size: 1.4em; margin-bottom: 15px; }
+.card p { color: var(--muted-text); line-height: 1.7; font-size: 0.95em; }
+
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--muted-text);
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+    }
+
+
+</style>
+</head>
+<body>
+
+<header class="nav-header">
+    <div class="nav-title">Department <span>Overview</span></div>
+    <a href="index.html" class="nav-home-btn">الرئيسية</a>
+</header>
+
+<div class="header-section">
+    <h1> لمحة عن اقسام الشرطة \ Department Overview<span></span></h1>
+</div>
+
+<div class="container">
+    <div class="grid">
+        <div class="card">
+            <i class="fas fa-gavel"></i>
+            <h2>Internal Affairs (I.A)</h2>
+            <p>يتولى التحقيق في المخالفات الإدارية والسلوكية داخل الشرطة، ويعمل على ضمان الالتزام بالأنظمة، وتعزيز النزاهة والمساءلة، والحفاظ على أعلى معايير الاحترافية بين جميع الأفراد.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-graduation-cap"></i>
+            <h2>Police Academy (P.A)</h2>
+            <p>الجهة المسؤولة عن تأهيل وتدريب المجندين الجدد، وتطوير مهارات الأفراد من خلال البرامج النظرية والعملية، لضمان جاهزيتهم للعمل الميداني وفق أعلى المعايير.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-dove"></i>
+            <h2>Wings & Units</h2>
+            <p>تضم الونقات التابعة للشرطة  كل ونق مهام محددة وفق اختصاصه، مثل ونق الطيران، والخ من المهام الخاصة، بما يعزز كفاءة العمل الأمني.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-handcuffs"></i>
+            <h2>SWAT Team</h2>
+            <p>وحدة تكتيكية متخصصة تُستدعى للتعامل مع العمليات عالية الخطورة، مثل احتجاز الرهائن، والاقتحامات، ومواجهة العناصر المسلحة، مع الاعتماد على التدريب المتقدم والتخطيط الدقيق.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-handcuffs"></i>
+            <h2>CID Team</h2>
+            <p>قسم متخصص في التحقيق بالجرائم، وجمع الأدلة، واستجواب المشتبه بهم، وتحليل القضايا الجنائية، بهدف الوصول إلى الحقائق ودعم العدالة وفق الإجراءات النظامية.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-dove"></i>
+            <h2>Soon</h2>
+            <p>...Nothing Soon</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>All Rights Reserved X.X95 © 2026</p>
+    <p>Designed by X.X95</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Department Responsibilities & Authoritie - مهام وصلاحيات الاقسام</title>
+<style>
+    :root {
+        --bg-color: #080c14;
+        --accent-color: #3a86ff;
+        --text-color: #ffffff;
+        --muted-text: #94a3b8;
+        --card-bg: rgba(15, 22, 38, 0.8);
+    }
+/* الأنيميشن */
+    @keyframes fadeInAnimation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        line-height: 1.6;
+        background-image: linear-gradient(rgba(8, 12, 20, 0.9), rgba(8, 12, 20, 0.9)), url('uuuiii.png');
+        background-size: cover;
+        background-attachment: fixed;
+        /* هنا تفعيل الأنيميشن */
+        animation: fadeInAnimation ease 1s;
+   }
+
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    padding: 20px 8%;
+    background: rgba(15, 22, 38, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+    /* تنسيق صندوق حماية كلمة المرور */
+    #password-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: var(--bg-color); display: flex; flex-direction: column;
+        justify-content: center; align-items: center; z-index: 9999;
+        animation: fadeIn 0.5s ease-out;
+    }
+    .pass-box { background: rgba(15, 22, 38, 0.9); padding: 40px; border-radius: 20px; text-align: center; border: 1px solid var(--accent-color); }
+    #password-overlay input { padding: 12px; border-radius: 5px; border: none; margin-bottom: 15px; width: 250px; outline: none; }
+    #password-overlay button { padding: 10px 25px; background: var(--accent-color); color: white; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+    #password-overlay button:hover { background: #2563eb; }
+    #error-msg { color: red; font-size: 14px; margin-top: 10px; display: none; }
+    
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(15, 22, 38, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    .logo { font-size: 24px; font-weight: bold; }
+    .logo span { color: var(--accent-color); }
+    .nav-home-btn { background-color: #1e6091; color: white; padding: 8px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .container { padding: 0 20px; max-width: 1000px; margin: 40px auto; }
+    h1 { font-size: 36px; text-align: center; margin-bottom: 30px; }
+    .rank-section { background: var(--card-bg); padding: 25px; border-radius: 15px; margin-bottom: 25px; border-right: 5px solid var(--accent-color); }
+    .rank-section h2 { color: var(--accent-color); font-size: 28px; margin-top: 0; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+    .rank-item { margin-bottom: 25px; font-size: 18px; line-height: 1.8; }
+    .rank-item strong { color: var(--accent-color); display: block; margin-bottom: 8px; font-size: 20px; }
+
+        footer {
+        text-align: center;
+        padding: 40px 20px;
+        color: var(--muted-text);
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+    }
+
+.note {
+    text-align: center;
+    color: var(--muted-text);
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Department <span> Responsibilities & Authorities</span></div>
+        <a href="index.html" class="nav-home-btn">الرئيسية</a>
+    </header>
+
+    <div class="container">
+        <h1>مهام وصلاحيات الاقسام \ Department R.A </h1>
+        <!-- باقي محتوى الصفحة كما هو -->
+    <div class="rank-section">
+        <h2>Internal Affairs Tasks , Permissions</h2>
+        <div class="rank-item"><strong>: Head of Internal Affairs </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الإشراف العام والكامل على إدارة الشؤون الداخلية.</li>
+            <li>2 - اعتماد السياسات والانضباط داخل السلم العسكري بعد الموافقة من (Senior Commanders)</li>
+            <li>3 - مراجعة واعتماد تقارير القضايا </li>
+            <li>4 - التنسيق في قرارات المصيريه مع (Senior Commanders). </li>
+            <li>5 - اعتماد تعيين وتكليف أعضاء ومسؤولين الشؤون الداخلية.</li>
+            <li>6 -  مراقبة أداء الإدارة ورفع تقارير (Senior Commanders). </li>
+            <li> الصلاحيات : </li>
+            <li>1 - يحق له محاسبة (Officer 1 - Staff Sergeant)  </li>
+            <li>2 - يحق له ترقية , صرف وخصم نقاط (Officer 1 - Staff Sergeant) </li>
+            <li>3 - أي تعميم يخص عموم منسوبي الشرطة يجب اخبار فيه (Senior Commanders) وتأتي الموافقة منهم  </li>
+            <li>4 - له كامل الصلاحيات في داخل قسم الشؤون الداخلية </li>
+            <li>5 - له كامل الصلاحيات على الافراد  </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: Supervisor Of Internal Affairs </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الإشراف المباشر على أعضاء الشؤون الداخلية</li>
+            <li>2 - متابعة التزام الأعضاء بالأنظمة والتعليمات والقوانين</li>
+            <li>3 - إدارة القضايا اليومية  </li>
+            <li>4 - إعداد تقارير عن أداء الأعضاء شؤون الداخلية </li>
+            <li>5 - التنسيق في بعض القرارت المصيريه مع رئاسة الشؤون الداخلية </li>
+            <li> الصلاحيات : </li>
+            <li>1 - يحق له محاسبة (Officer 1 - Staff Sergeant)  </li>
+            <li>2 - يحق له صرف وخصم نقاط  (Officer 1 - Staff Sergeant) </li>
+            <li>3 -  يحق له سحب منصب عضو في شؤون الداخلية بعد الرجوع الى رئيس الشؤون الداخلية  </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+
+        </ul>
+        <div class="rank-item"><strong>:  Internal Affairs Section Leader </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - قيادة وإدارة احد اقسام الشؤون الداخلية</li>
+            <li>2 - الإشراف على القسم التابع له  </li>
+            <li>3 - رفع التقارير والتوصيات إلى رئاسة الشؤون الداخلية للأعضاء القسم التابعه له بشكل اسبوعي </li>
+            <li> الصلاحيات : </li>
+            <li> Nothing  </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+
+        </ul>
+        <div class="rank-item"><strong>: Internal Affairs Member </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - استقبال البلاغات والشكاوى ضد  (Officer 1 - Senior Officer )</li>
+            <li>2 - جمع الأدلة وتوثيقها (صور – تسجيلات – تقارير والخ)</li>
+            <li>3 - كتابة تقارير التحقيق ورفعها لمشرف الشؤون الداخلية  </li>
+            <li> الصلاحيات : </li>
+            <li>1 - يحق له محاسبة (Officer 1 - Senior Officer) ويجب رفع تقرير المحاسبة لمسؤولين الشؤون الداخلية  </li>
+            <li>2 - يحق له صرف وخصم نقاط  (Officer 1 - Senior Officer) بعد موافقة مسؤولين الشؤون الداخلية </li>
+            <li>3 -  رصد مخالفات الافراد وتسجيلها ورفع للمسؤولين (Officer 1- Senior Officer) فقط  </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+    </div>
+
+<div class="rank-section">
+    <h2>Police Academy And Wings Tasks , Permissions</h2>
+    
+    <!-- الرتبة الأولى -->
+    <div class="rank-group">
+        <div class="rank-item"><strong>: Head Of Police Academy </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الاشراف العام داخل قسم الاكاديمية</li>
+            <li>2 - اعتماد السياسات والانضباط داخل السلم العسكري بعد الموافقة من (Senior Commanders)</li>
+            <li>3 - الإشراف على الانضباط داخل الأكاديمية </li>
+            <li>4 - التنسيق في قرارات المصيريه مع (Senior Commanders) </li>
+            <li>5 - اعتماد تعيين المدربين</li>
+            <li>6 -  اعتماد مناهج \ كتيب التدريبات </li>
+            <li>7 -  تقييم أداء كل فرد ومسؤول في الاكادمية </li>
+            <li>8 -  اعتماد العقوبات الأكاديمية </li>
+            <li>اتخاذ القرار النهائي في القبول أو الرفض</li>
+            <li> الصلاحيات : </li>
+            <li>1 -   يحق له فصل أي كاديت وسولو كاديت (المخالفة لازم تكون في البند ) </li>
+            <li>2 -  أي تعميم يخص عموم منسوبي الشرطةاو المواطنين يجب اخبار فيه (Senior Commanders) وتأتي الموافقة منهم</li>
+            <li>3 - يحق له ترقية  (Cadet - Officer 1) </li>
+            <li>4 - استلام اي مخالفة اعادة تأهيل </li>
+            <li>5 - يحق له اتخاذ قرار اعادة تأهيل (Cadet - Solo Cadet) </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: Police Supervisor Academy </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الإشراف المباشر على الدورات التدريبية</li>
+            <li>2 - متابعة أداء المدربين وFTO</li>
+            <li>3 - تنظيم التدريبات العسكرية  </li>
+            <li>4 - مراقبة انضباط المتدربين </li>
+            <li>5 - الإشراف على التدريبات </li>
+            <li>6 - الإشراف على استخدام الأسلحة وهو المسؤول في اعطاء سلاح للأفراد الجدد </li>
+            <li>7 - متابعة الالتزام بالزي  </li>
+
+            <li> الصلاحيات : </li>
+            <li>1 -  مسؤول عن اعضاء الاكاديمية </li>
+            <li>2 - يحق له تعين اعضاء داخل قسم الاكاديمية بعد مراجعة رئيس الاكاديمية </li>
+            <li>3 - مسؤول عن أي فرد يحصل له إعادة تأهيل (Cadet - Senior Officer) </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        </ul>
+        <div class="rank-item"><strong>:  Police Academy Section Leader </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - قيادة وإدارة احد اقسام الاكاديمية</li>
+            <li>2 - الإشراف على القسم التابع له  </li>
+            <li>3 - رفع التقارير والتوصيات إلى رئاسة الاكاديمية للأعضاء القسم التابعه له بشكل اسبوعي </li>
+            <li> الصلاحيات : </li>
+            <li> Nothing  </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+
+        <div class="rank-item"><strong>: Academy Member </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - تدريب المستجدين ميدانياً</li>
+            <li>2 - مرافقة المتدرب أثناء المباشر</li>
+            <li>3 - تقييم الأداء اليومي للمتدرب  </li>
+            <li>4 - مراقبة سلوك المتدرب </li>
+            <li>5 - ضمان الالتزام بالقوانين والأنظمة  للمتدرب </li>
+            <li>6 - رفع ملاحظات المتدرب مسؤولين الاكاديمية بشكل فوري </li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - فقط التدريب لاتوجد صلاحيه اخر </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+    </div>
+
+    
+
+        <div class="rank-item"><strong>: Wings Commander </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الإشراف العام على جميع ونقات الشرطة</li>
+            <li>2 - وضع الهيكل التنظيمي للونقات بعد موافقة (Senior Commanders)</li>
+            <li>3 - اعتماد إنشاء أو إيقاف أي شخص في الونقات</li>
+            <li>4 - تعيين (Wings Supervisor , Wings Leader) للونقات ومشرفين</li>
+            <li>5 - التنسيق المباشر مع (Senior Commanders) في القرارات المصيرية</li>
+            <li>6 - اعتماد خطط التدريب الخاصة لكل ونق</li>
+            <li>7 - مراجعة الأداء الدوري لمسؤولين الونقات</li>
+            <li> الصلاحيات : </li>
+            <li>1 -  يحق له تغير مسؤول الونق في حال كان ما يستحقها</li>
+            <li>3 - يحق له تعين (Wings Leader)</li>
+            <li>2 - يحق له سحب ونق في حال كان ما يستحقها او خالف قوانين الونق ( سبب واضح )</li>
+            <li>4 - يحق اضافة نقاط للمدربين في حال تدريب العساكر  كحد اقصى 5</li>
+            <li>5 - </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: Wings Supervisor </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الإشراف العام على جميع ونقات الشرطة</li>
+            <li>2 - الإشراف المباشر على جميع الونقات</li>
+            <li>3 - متابعة الالتزام بالأنظمة التابعه للونقات</li>
+            <li> الصلاحيات : </li>
+            <li>1 - يحق له تغير مسؤول الونق في حال كان ما يستحقها بعد موافقة (Wings Commander)</li>
+            <li>2 - يحق له سحب ونق في حال كان ما يستحقها او خالف قوانين الونق ( سبب واضح )</li>
+            <li>3 - يحق له تعين (Wings Leader) بعد الموافقة من (Wings Commander)</li>
+            <li>4 - يحق اضافة نقاط للمدربين في حال تدريب العساكر  كحد اقصى 5 بعد موافقة (Wings Commander)</li>
+            <li>5 - </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+        <div class="rank-item"><strong>: Wings Leader </strong></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الاشراف على الونق التابعه له</li>
+            <li>2 - فتح التقديم على الونق التابعه له بشكل اسبوعي </li>
+            <li>3 - مراجعة ادارة اعضاء الونق التابعين له</li>
+            <li> الصلاحيات : </li>
+            <li>1 - يحق له سحب ونق من اعضاء الونق التابع له بسبب واضح وصريح ومراجعة (Wings Commander , Wings Supervisor)</li>
+            <li>2 - يحق له رفض استلام شخص ونق التابعه له في حال كان يوجد سبب واضح </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+    </div>
+
+        <div class="rank-section">
+        <h2>Swat Tasks , Permissions</h2>
+        <div class="rank-item"><strong>: SWAT Commander</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الاشراف على فرقة (SWAT)</li>
+            <li>2 - الإشراف على العمليات التكتيكية الخاصة </li>
+            <li>3 - وضع الخطط والاستراتيجيات التشغيلية</li>
+            <li>4 - تقييم أداء وحدات (SWAT) ورفع كفاءتها</li>
+            <li>5 - التنسيق مع (Senior Commanders) في المهام الكبيرة جدا</li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - تعيين وإعفاء (SWAT Members , SWAT Supervisor)</li>
+            <li>3 - إيقاف أو إلغاء أي عملية تكتيكية إذا رأى وجود خطر أو مخالفة  </li>
+            <li>4 -  يحق له عمل تدريبات تخص فرقة </li>
+            <li>5 -  التحقيق في مخالفات أعضاء SWAT واتخاذ الإجراءات الإدارية  </li>
+            <li>6 -  يحق له ايقاف اي عضو او مشرف في SWAT عن المباشرة مع فرقة SWAT </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: SWAT Supervisor</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - الإشراف على أعضاء SWAT أثناء المهام</li>
+            <li>2 - متابعة جاهزية الأفراد والمعدات </li>
+            <li>3 - تنفيذ ومتابعة الخطط المعتمدة</li>
+            <li>4 - تقييم أداء الأعضاء ورفع التقارير (SWAT Commander)</li>
+            <li>5 - تنظيم التدريبات</li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - قيادة الفرق أثناء العمليات</li>
+            <li>3 - توزيع المهام على أعضاء الفريق  </li>
+            <li>4 -  استبعاد أي عضو غير جاهز للمهمة </li>
+            <li>6 -  يحق له ايقاف اي عضو او مشرف في SWAT عن المباشرة مع فرقة SWAT </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: SWAT Member</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - تنفيذ العمليات المكلف بها من قبل (SWAT Commander , SWAT Supervisor)</li>
+            <li>2 - المشاركة في عمليات الاقتحام عالية الخطورة وتأمين المواقع </li>
+            <li>3 - تأمين وإنقاذ الرهائن أثناء العمليات الخاصة</li>
+            <li>4 - تأمين محيط العملية ومنع دخول غير المصرح لهم</li>
+            <li>5 - المشاركة في التدريبات الدورية</li>
+            <li>6 - رفع أي ملاحظات أو مستجدات (SWAT Commander , SWAT Supervisor) أثناء تنفيذ المهمة</li>
+
+            <li> الصلاحيات : </li>
+            <li> Nothing</li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+    </div>
+
+
+        <div class="rank-section">
+        <h2>CID Tasks , Permissions</h2>
+        <div class="rank-item"><strong>: CID Director</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - إدارة والإشراف على جميع أعمال قسم (CID)</li>
+            <li>2 - اعتماد خطط التحقيق والعمليات الجنائية </li>
+            <li>3 - متابعة سير القضايا ذات الأولوية</li>
+            <li>4 - تقييم أداء وحدات (CID) ورفع كفاءتها</li>
+            <li>5 - التنسيق مع (Senior Commanders) في المهام الكبيرة جدا</li>
+            <li>5 - رفع تقارير الحالات الكبيرة (Senior Commanders)</li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - تعيين وإعفاء (CID Members , CID Supervisor)</li>
+            <li>3 - اعتماد فتح أو إغلاق التحقيقات الحساسة  </li>
+            <li>4 -  إصدار التعليمات والقرارات الخاصة بالقسم </li>
+            <li>5 -  اعتماد العمليات السرية والمهام الخاصة  </li>
+            <li>6 -  يحق له ايقاف اي عضو او مشرف في CID عن المباشرة مع فرقة CID </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: CID Supervisor</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 -  الإشراف على جميع فرق التحقيق</li>
+            <li>2 - متابعة تقدم القضايا  </li>
+            <li>3 - مراجعة التقارير والتأكد من اكتمالها</li>
+            <li>4 - متابعة التزام أعضاء القسم بالأنظمة</li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - اعتماد التقارير قبل رفعها (CID Director)</li>
+            <li>3 - إعادة فتح أو إعادة تقييم أي قضية عند الحاجة  </li>
+            <li>4 -  استبعاد أي عضو من قضية عند وجود مبرر </li>
+            <li>6 -  تكليف المحققين بالمهام الخاصة </li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+        <div class="rank-item"><strong>: Head of Detectives</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - قيادة فريق المحققين أثناء التحقيقات</li>
+            <li>2 - متابعة سير القضايا </li>
+            <li>3 - مراجعة الأدلة قبل اعتمادها ورفهاالى (CID Supervisor)</li>
+            <li>5 - تدريب وتوجيه المحققين الجدد</li>
+            <li>6 - التنسيق مع الأقسام المساندة أثناء التحقيق</li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - توزيع القضايا على المحققين</li>
+            <li>2 - تكليف المحققين بالاستجوابات وجمع الأدلة </li>
+            <li>3 - يحق له طلب دعم من الاقسام الاخرى عند الحاجة</li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+                <div class="rank-item"><strong>:Detectives</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - التحقيق في القضايا الجنائية</li>
+            <li>2 - جمع الأدلة وتحليلها </li>
+            <li>3 - استجواب المشتبه بهم والشهود</li>
+            <li>5 - إعداد ورفع تقارير التحقيق الى (Head of Detectives)</li>
+            <li>6 - تنفيذ أوامر القبض والتفتيش بعد اعتمادها</li>
+
+            <li> الصلاحيات : </li>
+            <li>1 - طلب الدعم من الوحدات المختصة اثناء التحقيق</li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+                <div class="rank-item"><strong>: CID Member</strong> <span class="soon-text"></span></div>
+                <ul>
+            <li>المهام :</li>
+            <li>1 - مساندة المحققين في القضايا المكلف بها</li>
+            <li>2 - جمع المعلومات والأدلة الأولية </li>
+            <li>3 - تأمين مسرح الجريمة عند الحاجة</li>
+            <li>5 - إعداد التقارير المطلوبة</li>
+            <li>6 - تنفيذ التعليمات الصادرة من قادة القسم</li>
+
+            <li> الصلاحيات : </li>
+            <li>Nothing</li>
+            <li style="color: #ef4444; font-weight: bold;">اي صلاحية غير مكتوبه فهي لاتحق له.</li>
+        </ul>
+
+
+    </div>
+        <div class="note">تنويه: جميع الصلاحيات المدرجة أعلاه قابلة للتعديل والتحسين المستمر وايضا مخالفتك لأحد الصلاحيات تعرضك للمحاسبة الشديدة .</div>
+</div>
+
+<footer>
+    <p>All Rights Reserved X.X95 © 2026</p>
+    <p>Designed by X.X95</p>
+</footer>
+
+
+</body>
+</html>
